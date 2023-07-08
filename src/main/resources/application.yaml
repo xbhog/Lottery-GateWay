@@ -1,0 +1,26 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: lottery-Gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: gateway-route
+          uri: lb://LOTTERY-STRATEGY
+    config:
+      override-none: true
+      allow-override: true
+      override-system-properties: false
+      nacos:
+        discovery:
+          server-addr: 1.15.86.246:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
