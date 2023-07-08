@@ -12,7 +12,7 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: gateway-route
+        - id: strategy-route
           uri: lb://lottery-strategy
           predicates:
-            - Path=/hello/**
+            - Path=/rpc/**
