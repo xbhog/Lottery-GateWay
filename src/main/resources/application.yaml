@@ -10,7 +10,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
       routes:
         - id: strategy-route
           uri: lb://lottery-strategy
